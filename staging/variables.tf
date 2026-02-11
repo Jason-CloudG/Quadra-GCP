@@ -7,6 +7,7 @@ variable "region" {
   default = "asia-south1"
 }
 
-variable "github_repo" {
-type=string
+variable "zone" {
+  type    = string
+  default = "asia-south1-a"
 }
