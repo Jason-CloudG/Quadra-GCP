@@ -7,4 +7,9 @@ terraform {
       version = "~> 5.0"
     }
   }
+
+  backend "gcs" {
+    bucket  = "staging-terraform-76"
+    prefix  = "vm-vpc"
+  }
 }
