@@ -1,7 +1,7 @@
 variable "project_id" {
   description = "GCP Project ID"
   type        = string
-  default     = venkatesh-sandbox-new
+  default     = "venkatesh-sandbox-new"
 }
 
 variable "region" {
