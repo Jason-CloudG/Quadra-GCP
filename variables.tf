@@ -8,3 +8,9 @@ variable "region" {
   type        = string
   default     = "asia-south1"
 }
+
+variable "gcp_credential" {
+  description = "Base64 encoded GCP service account key"
+  type        = string
+  sensitive   = true
+}
