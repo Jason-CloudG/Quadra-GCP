@@ -1,5 +1,5 @@
-resource "google_compute_firewall" "allow_ssh_tfm" {
-  name    = "allow-ssh"
+resource "google_compute_firewall" "allow_ssh" {
+  name    = "allow-ssh-tfm"
   network = google_compute_network.custom_vpc.name
   project = var.project_id
 
