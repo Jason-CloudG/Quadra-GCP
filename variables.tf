@@ -9,3 +9,8 @@ variable "region" {
   type        = string
   default     = "asia-south1"
 }
+
+variable "GOOGLE_CREDENTIALS" {
+  type      = string
+  sensitive = true
+}
