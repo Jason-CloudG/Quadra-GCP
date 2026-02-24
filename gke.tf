@@ -1,4 +1,5 @@
 resource "google_container_cluster" "gke" {
+  count    = var.enable_gke ? 1:0
   name     = "demo-gke"
   location = var.region
   project  = var.project_id
@@ -11,8 +12,9 @@ resource "google_container_cluster" "gke" {
 }
 
 resource "google_container_node_pool" "primary_nodes" {
+  count      = var.enable_gke ? 1:0
   name       = "primary-pool"
-  cluster    = google_container_cluster.gke.name
+  cluster    = google_container_cluster.gke[0].name
   location   = var.region
   node_count = 1
   project    = var.project_id
